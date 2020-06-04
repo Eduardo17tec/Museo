@@ -11,6 +11,6 @@ namespace Museo.Models
         public string Nombre { get; set; }
         public DateTime FechaNac { get; set; }
         public string Descripcion { get; set; }
-        public Artwork Artwork { get; set; }
+        //public Artwork Artwork { get; set; }
     }
 }

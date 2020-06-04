@@ -15,7 +15,7 @@ namespace Museo.Models
         public string Descripcion { get; set; }
         public string ImgUrl { get; set; }
         public int ArtistId { get; set; }
-        [ForeignKey("ArtistIid")]
+        [ForeignKey("ArtistId")]
         public Artist Artist { get; set; }
     }
 }

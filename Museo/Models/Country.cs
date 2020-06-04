@@ -10,10 +10,10 @@ namespace Museo.Models
     {
         public int Id { get; set; }
         public string NombrePais { get; set; }
-        public int ArtistId { get; set; }
-        [ForeignKey("ArtistIid")]
+        public int? ArtistId { get; set; }
+        [ForeignKey("ArtistId")]
         public Artist Artist { get; set; }
-        public int ArtworkId { get; set; }
+        public int? ArtworkId { get; set; }
         [ForeignKey("ArtworkId")]
         public Artwork Artwork { get; set; }
     }
