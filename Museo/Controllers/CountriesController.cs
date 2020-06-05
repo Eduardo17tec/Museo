@@ -10,9 +10,15 @@ using Museo.Models;
 
 namespace Museo.Controllers
 {
+    [Authorize]
     public class CountriesController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
+
+        public ActionResult CD()
+        {
+            return View(db.Countries.ToList());
+        }
 
         // GET: Countries
         public ActionResult Index()

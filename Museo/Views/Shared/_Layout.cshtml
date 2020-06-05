@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - Mi aplicación ASP.NET</title>
+    <title>@ViewBag.Title - Practica Semanal</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     <link href="//cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" rel="stylesheet" />
@@ -27,7 +27,7 @@
                             <a class="nav-link text-white" href="@Url.Action("Index", "Principal")">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="@Url.Action("About", "Home")">Acerca de nosotros</a>
+                            <a class="nav-link text-white" href="@Url.Action("About", "Home")">Acerca de Nosotros</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-white" href="@Url.Action("Contact", "Home")">Contacto</a>
@@ -35,38 +35,33 @@
                         @if (User.IsInRole("Admin"))
                         {
                             <li class="nav-item">
-                                <a class="nav-link text-white" href="@Url.Action("Index", "Users")">Usuarios</a>
+                                <a class="nav-link text-white" href="@Url.Action("Index", "Artists")">Artistas</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-white" href="@Url.Action("Index", "Veterinary")">Medico</a>
+                                <a class="nav-link text-white" href="@Url.Action("Index", "Artworks")">Obras de Arte</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="@Url.Action("Index", "Countries")">Paises</a>
                             </li>
                         }
 
-                        @if (User.IsInRole("Veterinary") || User.IsInRole("Admin"))
+                        @if (User.IsInRole("Tourist"))
                         {
                             <li class="nav-item">
-                                <a class="nav-link text-white" href="@Url.Action("Index", "Consults")">Consultas</a>
+                                <a class="nav-link text-white" href="@Url.Action("AD", "Artists")">Los Mejores Artistas</a>
                             </li>
-                        }
-
-                        @if (User.IsInRole("Owner"))
-                        {
                             <li class="nav-item">
-                                <a class="nav-link text-white" href="@Url.Action("Index","Pets")">Mascotas</a>
+                                <a class="nav-link text-white" href="@Url.Action("AWD", "Artworks")">Las Grandes Obras</a>
                             </li>
-
-                        }
-                        @if (User.IsInRole("Admin"))
-                        {
                             <li class="nav-item">
-                                <a class="nav-link text-white" href="@Url.Action("AllPets","Pets")">Mascotas</a>
+                                <a class="nav-link text-white" href="@Url.Action("CD", "Countries")">Paises Donde se Orginan sus Obras</a>
                             </li>
-
                         }
+
 
                     </ul>
                 </h5>
-                <span class="text-muted">Todos los animales son bienvenidos.</span>
+                <span class="text-muted">Donde el Arte Cobra Vida.</span>
             </div>
         </div>
         <nav class="navbar navbar-dark bg-dark">
@@ -79,7 +74,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - Mi aplicación ASP.NET</p>
+            <p>&copy; @DateTime.Now.Year - Practica Semanal</p>
         </footer>
     </div>
 

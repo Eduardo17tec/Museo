@@ -376,6 +376,9 @@
     <Content Include="Views\Countries\Details.cshtml" />
     <Content Include="Views\Countries\Edit.cshtml" />
     <Content Include="Views\Countries\Index.cshtml" />
+    <Content Include="Views\Artists\AD.cshtml" />
+    <Content Include="Views\Artworks\AWD.cshtml" />
+    <Content Include="Views\Countries\CD.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
