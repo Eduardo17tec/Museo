@@ -41,9 +41,10 @@ namespace Museo.Models
         {
             return new ApplicationDbContext();
         }
+        public DbSet<Tourist> Tourists { get; set; }
         public DbSet<Artist> Artists { get; set; }
         public DbSet<Country> Countries { get; set; }
         public DbSet<Artwork> Artworks { get; set; }
-        public DbSet<Tourist> Tourists { get; set; }
+        
     }
 }
